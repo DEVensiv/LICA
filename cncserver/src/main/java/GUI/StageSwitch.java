@@ -45,6 +45,8 @@ public class StageSwitch implements ActionListener {
             visualizer();
         } else if (e.getSource().equals(EditorGUI.setPiece)){
             configSetPiece();
+        }else if (e.getSource().equals(LicaGUI.Info)){
+            new InfoGUI();
         }
 
 

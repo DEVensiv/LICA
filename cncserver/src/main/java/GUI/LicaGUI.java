@@ -3,17 +3,20 @@ package GUI;
 import config.Config;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class LicaGUI extends JFrame{
 
     private static final long serialVersionUID = 1L;
     public static JButton toMain,start,weiter;
     public static JButton B1sens,F1sens,R1sens;
+    public static JButton Info;
     public static JTextField info;
     public static JButton Configer;
     public static JTextArea B1,F1,R1,B1stat,F1stat,R1stat;
 
     public LicaGUI(StageSwitch stageSwitch) {
+        //setUndecorated(true);
         setLayout(null);
         setSize(500, 500);
         setAutoRequestFocus(true);
@@ -32,6 +35,7 @@ public class LicaGUI extends JFrame{
         add(weiter);
         add(start);
         add(info);
+        add(Info);
         add(toMain);
         add(B1sens);
         add(F1sens);
@@ -96,6 +100,11 @@ public class LicaGUI extends JFrame{
         Configer.setText("Config");
         //Configer.setEnabled(false);
         Configer.addActionListener(stageSwitch);
+        Info = new JButton("h");
+        Info.setText("?");
+        Info.setBounds(430,20,50,20);
+        Info.setCursor(Cursor.getPredefinedCursor(12));
+        Info.addActionListener(stageSwitch);
     }
 
 }
