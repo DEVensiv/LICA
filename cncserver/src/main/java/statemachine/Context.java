@@ -1,10 +1,10 @@
 package statemachine;
 
 import communication.ArduinoConnection;
+import config.Config;
 import config.Task;
 import statemachine.commands.Command;
 import statemachine.events.Event;
-import config.Config;
 import statemachine.states.State;
 
 import java.util.List;

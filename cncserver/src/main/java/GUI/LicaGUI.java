@@ -1,7 +1,5 @@
 package GUI;
 
-import config.Config;
-
 import javax.swing.*;
 import java.awt.*;
 

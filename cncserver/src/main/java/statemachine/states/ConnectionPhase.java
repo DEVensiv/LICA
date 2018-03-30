@@ -1,7 +1,6 @@
 package statemachine.states;
 
 import communication.ArduinoConnection;
-
 import purejavacomm.CommPortIdentifier;
 import statemachine.Context;
 import statemachine.events.ConnectionEvent;

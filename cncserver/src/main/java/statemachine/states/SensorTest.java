@@ -1,7 +1,7 @@
 package statemachine.states;
 
-import statemachine.Main;
 import statemachine.Context;
+import statemachine.Main;
 import statemachine.commands.Connect;
 import statemachine.commands.StopSensor;
 import statemachine.events.B1Sensor;

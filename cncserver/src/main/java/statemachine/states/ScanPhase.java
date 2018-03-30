@@ -9,7 +9,6 @@ import statemachine.events.VisualizeEvent;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class ScanPhase implements State{
     @Override

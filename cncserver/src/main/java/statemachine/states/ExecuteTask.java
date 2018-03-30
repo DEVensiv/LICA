@@ -1,6 +1,5 @@
 package statemachine.states;
 
-import config.Drill;
 import config.Task;
 import statemachine.Context;
 import statemachine.events.ConnectionInterrupted;

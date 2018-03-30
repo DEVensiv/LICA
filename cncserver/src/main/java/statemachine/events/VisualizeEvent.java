@@ -1,7 +1,5 @@
 package statemachine.events;
 
-import config.WorkpieceID;
-
 public class VisualizeEvent implements Event{
     String fromArdu;
 

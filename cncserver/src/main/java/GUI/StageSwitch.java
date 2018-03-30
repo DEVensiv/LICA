@@ -6,7 +6,6 @@ import statemachine.commands.Start;
 import statemachine.commands.StopSensor;
 import statemachine.commands.TestSensor;
 import statemachine.events.*;
-import statemachine.events.Event;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

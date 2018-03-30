@@ -4,6 +4,7 @@ import javax.swing.*;
 
 public class InfoGUI extends JFrame{
 
+
     public InfoGUI(){
 
         setSize(700, 500);
@@ -13,6 +14,10 @@ public class InfoGUI extends JFrame{
         setVisible(true);
         setLocationRelativeTo(null);
         setTitle("Info");
+        init();
+    }
+
+    void init(){
 
     }
 

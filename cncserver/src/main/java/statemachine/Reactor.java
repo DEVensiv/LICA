@@ -5,8 +5,6 @@ import statemachine.commands.Command;
 import statemachine.events.Event;
 import statemachine.states.State;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class Reactor {

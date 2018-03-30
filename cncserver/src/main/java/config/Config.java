@@ -1,11 +1,12 @@
 package config;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class Config {
     HashMap<WorkpieceID, List<Task>> config = new HashMap<>();

@@ -2,9 +2,7 @@ package GUI;
 
 import config.*;
 
-import java.awt.Canvas;
-import java.awt.Graphics;
-import java.awt.Color;
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
