@@ -58,9 +58,9 @@ public class Main {
 
     public static void makeAlert(String message, String title){
 
-        JOptionPane.showMessageDialog(new JFrame(),
-                message,
-                title, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(new JFrame(),
+                    message,
+                    title, JOptionPane.ERROR_MESSAGE);
 
     }
 

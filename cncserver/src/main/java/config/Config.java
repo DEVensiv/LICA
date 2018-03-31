@@ -25,11 +25,9 @@ public class Config {
             line = in.readLine();
             List<Task> list = new ArrayList<>();
             String code = line.substring(0, 5);
-            try {
-                new WorkpieceID(code);
-            } catch (Exception e) {
+            if (!new WorkpieceID(code).isValid())
                 continue;
-            }
+
             String lineNoCode = line.substring(6);
             String[] tasks = lineNoCode.split("#");
             for (int i = 0; i < tasks.length; i++) {
