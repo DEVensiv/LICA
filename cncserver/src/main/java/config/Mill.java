@@ -106,8 +106,8 @@ public class Mill implements Task {
     }
 
 
+    /**usage: call sleep(); and active Thread will stop for 500millis*/
     void sleep(){
-
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
@@ -115,6 +115,8 @@ public class Mill implements Task {
         }
 
     }
+
+    /**call with sleep(millis)*/
     void sleep(int i){
 
         try {
