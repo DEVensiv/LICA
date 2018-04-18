@@ -7,7 +7,7 @@ import javax.swing.*;
 public class VisualGUI extends JFrame {
     public VisualGUI(String input) {
 
-        Visualize v = new Visualize(new WorkpieceID(input));
+        VisualizeProcess v = new VisualizeProcess(new WorkpieceID(input));
         setSize(720, 720);
         setAutoRequestFocus(true);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

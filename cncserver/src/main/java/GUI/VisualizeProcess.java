@@ -10,7 +10,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-public class Visualize extends Canvas {
+public class VisualizeProcess extends Canvas {
     private WorkpieceID WpID;
     @Override
     public void paint(Graphics g) {
@@ -43,7 +43,7 @@ public class Visualize extends Canvas {
 
     }
 
-    public Visualize(WorkpieceID WpID){
+    public VisualizeProcess(WorkpieceID WpID){
         this.WpID = WpID;
     }
 

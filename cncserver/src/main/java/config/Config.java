@@ -19,7 +19,7 @@ public class Config {
 
     public Config(File configFile) throws IOException {
 
-        BufferedReader in = new BufferedReader(new FileReader("data.txt"));
+        BufferedReader in = new BufferedReader(new FileReader("./resource/data.txt"));
         String line = null;
         for (int value = 0; value <= 5; value++) {
             line = in.readLine();
