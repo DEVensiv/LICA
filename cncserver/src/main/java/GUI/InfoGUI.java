@@ -1,6 +1,7 @@
 package GUI;
 
 import javafx.stage.Screen;
+import statemachine.Main;
 
 import javax.swing.*;
 import java.awt.*;
@@ -48,6 +49,7 @@ public class InfoGUI extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource().equals(close))
+            Main.stop();
             this.dispose();
         if (e.getSource().equals(credits))
             credits.setEnabled(false);

@@ -49,7 +49,7 @@ public class AutoCalibrate implements State{
 
             for(int i = 0; i <= 1; i++) {
                 System.out.println("B1:" + ctx.arduinoB1.receiveResponse());
-                System.out.println(ctx.arduinoF1.receiveResponse());
+                System.out.println("F1:" + ctx.arduinoF1.receiveResponse());
                 Thread.sleep(100);
             }
 

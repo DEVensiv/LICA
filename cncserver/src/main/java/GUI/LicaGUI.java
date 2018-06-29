@@ -45,7 +45,7 @@ public class LicaGUI extends JFrame{
     }
     void init(StageSwitch stageSwitch){
         start = new JButton();
-        info = new JTextField("Infos");
+        info = new JTextField("Info Feld... Bitte warten für Verbindung");
         toMain = new JButton();
         weiter = new JButton();
         B1sens = new JButton();

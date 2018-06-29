@@ -26,6 +26,7 @@ public class ConnectionPhase implements State {
 
     @Override
     public State execute(Context ctx) {
+        //List<CommPortIdentifier> ports = Collections.list(CommPortIdentifier.getPortIdentifiers());
         List<CommPortIdentifier> activePorts = Collections.list(CommPortIdentifier.getPortIdentifiers());
         List<ArduinoConnection> arduinoConnections = activePorts.stream()
             .filter((identifier) -> identifier.getPortType() == CommPortIdentifier.PORT_SERIAL)

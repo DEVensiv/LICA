@@ -23,6 +23,8 @@ public class Main {
     public static StageSwitch l;
     public static Reactor r;
     static Config cfg;
+    public boolean close;
+
     public static void main(String[] args){
         try {
             cfg = new Config(new File("data.txt"));
@@ -56,6 +58,7 @@ public class Main {
 
     }
 
+
     public static void makeAlert(String message, String title){
 
             JOptionPane.showMessageDialog(new JFrame(),
@@ -64,4 +67,7 @@ public class Main {
 
     }
 
+    public static final void stop(){
+        r.stop();
+    }
 }

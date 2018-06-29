@@ -11,7 +11,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jdk1.8" level="project" />
-    <orderEntry type="library" name="purejavacomm-1.0.1" level="project" />
     <orderEntry type="library" name="jna-4.2.2" level="project" />
+    <orderEntry type="library" name="purejavacomm-1.0.1" level="project" />
   </component>
 </module>

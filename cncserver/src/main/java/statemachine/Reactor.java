@@ -8,7 +8,7 @@ import statemachine.states.State;
 import java.util.concurrent.TimeUnit;
 
 public class Reactor {
-    private static Context context;
+    public static Context context;
     private Thread runner;
 
     public Reactor(State initialState, Config config) {
@@ -23,6 +23,14 @@ public class Reactor {
 
     public void sendCommand(Command cmd) {
         context.inCommandQueue.add(cmd);
+    }
+
+    public void stop(){
+        context.arduinoR1.close();
+        context.arduinoB1.close();
+        context.arduinoF1.close();
+        System.out.println(context.arduinoR1.toString());
+        System.exit(1337);
     }
 
     public Event fetchEvent() {

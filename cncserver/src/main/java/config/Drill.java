@@ -6,10 +6,10 @@ import statemachine.events.InfoLineEvent;
 import java.io.IOException;
 
 public class Drill implements Task {
-    int x;
-    int y;
-    int z;
-    int speed;
+    int x;          //x-
+    int y;          //y-
+    int z;          //z- Coordinate
+    int speed;      //speed for drilling down
 
     public Drill(int x, int y, int z, int speed) {
         this.x = x;
@@ -73,7 +73,7 @@ public class Drill implements Task {
             System.out.println("B1:" + ctx.arduinoB1.receiveResponse());
 
             ctx.arduinoB1.sendCommand("ZNL;");
-            System.out.println(ctx.arduinoB1.receiveResponse());
+            System.out.println("B1:" + ctx.arduinoB1.receiveResponse());
             ctx.arduinoB1.sendCommand("MOT:5,0,0,0;");
             ctx.outEventQueue.add(new InfoLineEvent("Bohrung fertiggestellt."));
             if(!ctx.taskStack.isEmpty() && ctx.taskStack.get(0) instanceof Drill) {
@@ -85,7 +85,7 @@ public class Drill implements Task {
         }
         ctx.outEventQueue.add(new InfoLineEvent("Alle Bohrungen wurden durchgeführt."));
         ctx.arduinoB1.sendCommand("ZNL;");
-        System.out.println(ctx.arduinoB1.receiveResponse());
+        System.out.println("B1:" + ctx.arduinoB1.receiveResponse());
         ctx.arduinoB1.sendCommand("MOT:5,0,0,0;");
         sleep();
         ctx.arduinoB1.sendCommand("XNL;");
@@ -106,6 +106,9 @@ public class Drill implements Task {
         ctx.arduinoB1.sendCommand("XPS:170,0,0,0;");
         System.out.println("B1:" + ctx.arduinoB1.receiveResponse());
         ctx.arduinoR1.sendCommand("ROT:135,0,0,0;");
+        sleep();
+        ctx.arduinoR1.sendCommand("MOT:5,0,0,0");
+        System.out.println("R1:" + ctx.arduinoR1.receiveResponse());
     }
     void sleep(){
 

@@ -3,7 +3,6 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
       <module name="cncserver" target="1.8" />
-      <module name="LICA" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

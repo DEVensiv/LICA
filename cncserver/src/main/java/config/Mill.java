@@ -116,7 +116,7 @@ public class Mill implements Task {
 
     }
 
-    /**call with sleep(millis)*/
+    /**usage: call sleep(millis); and aactive Thread will stop for 'millis'millis*/
     void sleep(int i){
 
         try {
