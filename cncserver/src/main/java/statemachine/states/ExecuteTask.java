@@ -16,9 +16,11 @@ public class ExecuteTask implements State{
 
         try {
             ctx.arduinoR1.sendCommand("MOT:4,0,255,0;");
+            sleep();
             ctx.arduinoR1.sendCommand("XNL;");
             System.out.println("R1:" + ctx.arduinoR1.receiveResponse());
             task.executeTask(ctx);
+            sleep();
             ctx.arduinoR1.sendCommand("MOT:4,0,0,0;");
         } catch (IOException e) {
             ctx.outEventQueue.add(new ConnectionInterrupted(e));
@@ -32,4 +34,14 @@ public class ExecuteTask implements State{
             return this;
         }
     }
+
+    void sleep()
+    {
+try {
+
+    Thread.sleep(500);
+}catch (Exception e){}
+
+    }
+
 }

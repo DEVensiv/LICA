@@ -45,7 +45,7 @@ public class Drill implements Task {
         System.out.println("R1:" + ctx.arduinoR1.receiveResponse());
         ctx.arduinoR1.sendCommand("MOT:4,0,255,0;");
         sleep();
-        ctx.arduinoR1.sendCommand("ROT:530,0,0,0;");
+        ctx.arduinoR1.sendCommand("ROT:535,0,0,0;");
         System.out.println("R1:" + ctx.arduinoR1.receiveResponse());
         ctx.arduinoB1.sendCommand("XNL;");
         System.out.println("B1:" + ctx.arduinoB1.receiveResponse());
@@ -105,10 +105,10 @@ public class Drill implements Task {
         System.out.println("R1:" + ctx.arduinoR1.receiveResponse());
         ctx.arduinoB1.sendCommand("XPS:170,0,0,0;");
         System.out.println("B1:" + ctx.arduinoB1.receiveResponse());
-        ctx.arduinoR1.sendCommand("ROT:135,0,0,0;");
+        //ctx.arduinoR1.sendCommand("ROT:135,0,0,0;");
+        //System.out.println("R1:" + ctx.arduinoR1.receiveResponse());
+        ctx.arduinoR1.sendCommand("MOT:5,0,0,0;");
         sleep();
-        ctx.arduinoR1.sendCommand("MOT:5,0,0,0");
-        System.out.println("R1:" + ctx.arduinoR1.receiveResponse());
     }
     void sleep(){
 

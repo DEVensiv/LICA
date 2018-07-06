@@ -31,7 +31,6 @@ public class Mill implements Task {
         sleep();
         ctx.arduinoR1.sendCommand("ROT:530,0,0,0;");
         System.out.println("R1:" + ctx.arduinoR1.receiveResponse());
-        System.out.println("R1:" + ctx.arduinoR1.receiveResponse());
         ctx.arduinoF1.sendCommand("XNL;");
         System.out.println("F1:" + ctx.arduinoF1.receiveResponse());
         ctx.arduinoR1.sendCommand("ZMX;");
@@ -62,7 +61,7 @@ public class Mill implements Task {
                     int y = Integer.parseInt(millpath);
                     y+=100;
                     String s = String.valueOf(y);
-                    ctx.arduinoF1.sendCommand("MOT:5,0,255 ,0;");
+                    ctx.arduinoF1.sendCommand("MOT:5,0,255,0;");
                     sleep();
                     ctx.arduinoF1.sendCommand("ZPS:" + s + ",255,0,0;");
                     System.out.println("F1:" + ctx.arduinoF1.receiveResponse());
@@ -95,14 +94,15 @@ public class Mill implements Task {
         }
         ctx.arduinoR1.sendCommand("MOT:5,0,255,0;");
         sleep();
-        ctx.arduinoF1.sendCommand("MOT:4,0,255,0;");
-        sleep();
         ctx.arduinoR1.sendCommand("ZMX;");
         System.out.println("R1:" + ctx.arduinoR1.receiveResponse());
+        ctx.arduinoF1.sendCommand("MOT:4,0,255,0;");
+        sleep();
         ctx.arduinoR1.sendCommand("ZNL;");
         System.out.println("R1:" + ctx.arduinoR1.receiveResponse());
         ctx.arduinoF1.sendCommand("XPS:170,0,0,0;");
         System.out.println("F1:" + ctx.arduinoF1.receiveResponse());
+        sleep();
     }
 
 
